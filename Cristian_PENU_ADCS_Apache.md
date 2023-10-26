@@ -82,7 +82,7 @@ par exemple www.cris.lan
 
 ***
 
-## 6ème step importer votre .cer dans votre apache 
+## 6ème étape importer votre .cer dans votre apache 
 
 ***solution winscp et les vmtools***
 
@@ -90,7 +90,7 @@ Deposer votre .cer dans votre /etc/ssl/certs
 
 ***
 
-## 7ème step configuration d'apache
+## 7ème étape configuration d'apache
 
 ***mettre le bon path pour chaque certificat***
 
