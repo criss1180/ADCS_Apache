@@ -6,8 +6,8 @@
 
 cd /etc/ssl/private
 openssl genrsa -out www.cris.lan.key 2048
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/6a535629-1e60-4ca0-aef6-c3179e25bb53)
 
-![[Pasted image 20231026123712.png]]
 
 
 ***
@@ -39,7 +39,8 @@ subjectAltName = @alt_names
 DNS.1 = cris.lan
 DNS.2 = www.cris.lan
 
-![[Pasted image 20231026123057.png]]
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/51fdba87-1f48-4585-8a25-d12fae1345dd)
+
 
 
 ***
@@ -51,7 +52,8 @@ DNS.2 = www.cris.lan
 cd /etc/ssl/private 
 openssl req -new -key www.cris.lan.key -out www.cris.lan.csr -config ../www.cris.lan.conf
 
-![[Pasted image 20231026124559.png]]
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/a4395d43-8f41-4e13-a30f-12b30b3dcb23)
+
 
 
 ***
@@ -69,12 +71,14 @@ openssl req -new -key www.cris.lan.key -out www.cris.lan.csr -config ../www.cris
 cd C:\cert
 certreq -submit -attrib "CertificateTemplate:WebServer" www.cris.lan.csr
 
-![[Pasted image 20231026125755.png]]
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/1a4060d8-0147-4239-99a2-2d83f5da2fd7)
+
 
 ensuite vous donner un nom à votre fichier
 par exemple www.cris.lan
 
-![[Pasted image 20231026125904.png]]
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/6d60c798-f6ee-424a-a25d-eed3841d64bd)
+
 
 ***
 
@@ -96,12 +100,14 @@ nano default-ssl.conf
         SSLCertificateFile      /etc/ssl/certs/www.cris.lan.cer
         SSLCertificateKeyFile   /etc/ssl/private/www.cris.lan.key
 
-![[Pasted image 20231026130422.png]]
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/3e173672-6a5e-452e-af8f-34b16e9c623d)
+
 
 
 systemctl restart apache2
 
 Afficher la page :
 
-![[Pasted image 20231026130737.png]]
+![image](https://github.com/criss1180/ADCS_Apache/assets/115303549/05dfca86-836f-4d46-8f66-e8cdec08646c)
+
 
